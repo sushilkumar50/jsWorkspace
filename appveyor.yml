@@ -7,7 +7,7 @@ environment:
   # install scripts. (run after repo cloning)
 
   install: 
-   - ps: Install-Product node $env:nodejs_version
+   - ps: "Install-Product node $env:nodejs_version"
    # install modules
    - npm install
   
