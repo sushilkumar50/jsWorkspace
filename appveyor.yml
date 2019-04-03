@@ -1,0 +1,20 @@
+# test against this version of Node.js
+
+environment:
+  # node.js
+  -nodejs_version: "8.11.3"
+
+  # install scripts. (run after repo cloning)
+
+  install: 
+   - ps: Install-Product node $env:nodejs_version
+   # install modules
+   - npm install
+  
+  test_script:
+    - node --version
+    - npm --version
+    - npm test
+
+  build: off
+
